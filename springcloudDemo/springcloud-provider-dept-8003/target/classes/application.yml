@@ -1,0 +1,26 @@
+server:
+  port: 8003
+
+#spring配置
+spring:
+  application:
+    name: springcloud-provider-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloud03?serverTimezone=GMT
+    username: root
+    password: yy19981023
+
+#eureka配置 , 服务注册到哪里
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: springcloud-provider-dept8003      #修改eureka上status的默认信息
+
+#info配置（监控）
+info:
+  app.name: yuchen-springcloud
+  company.name: blog.yuchen.com

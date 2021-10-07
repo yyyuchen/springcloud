@@ -1,0 +1,12 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: springcloud-config-server
+###  连接远程仓库 start   ###
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/wang-yuchen11/springcloud-config.git
+###  连接远程仓库 end   ###
